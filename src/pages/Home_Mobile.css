@@ -1,0 +1,74 @@
+/* Padding - 15px */
+/* Ipad */
+@media only screen and (max-width: 1024px) {
+    body {
+      padding: 0;
+    }
+  }
+
+/* smartPhone */
+@media only screen and (max-width: 768px) {
+    body {
+      padding: 0;
+    }
+    .navbarHome {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        padding-right: 15px;
+    }
+    
+    .titles{
+        margin: 0px;
+        padding-top: 0px;
+        padding-left: 15px;
+    }
+    .skillsDiv{
+        display: block;
+    }
+    .skillsDiv ul{
+        padding: 0;
+    }
+    /* myself_me */
+    p.textoAbout{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    /* thoughts & opinons */
+    .posts{
+        display: block;
+        padding: 0;
+    }
+    .ulPostsleft p{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .ulPostsleft a{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .ulPostsright p{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .ulPostsright a{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    /* contact */
+    .titleDiv{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    /* footer */
+    #footer{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+  }
+
+/* smartPhone */
+@media only screen and (max-width: 450px) {
+    body {
+      padding: 0;
+    }
+  }

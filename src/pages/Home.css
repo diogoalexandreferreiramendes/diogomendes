@@ -1,0 +1,255 @@
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .navbarHome{
+    background-color: #fff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 200px;
+  }
+  
+  .ulnavbar{
+    display:flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #listStyle{
+    padding-right: 25px;
+  }
+  
+  .ulnavbar li{
+    list-style: none;
+  }
+  
+  .ulnavbar li a{
+    text-decoration: none;
+    color: black;
+  }
+  /* color body */
+  
+  .colorBody{
+    background-color: #FDFAEF;
+    padding-right: 0;
+  }
+  
+  /* intro */
+  
+  .introHome{
+    display: flex;
+  }
+  
+  .introHome p{
+    margin: 0;
+  }
+  
+  #myself{
+    width: 400px;
+  }
+  
+  .introHomeText{
+    padding-top: 200px;
+    padding-left: 50px;
+  }
+  
+  /* skills */
+  .skills{
+    /* padding-left: 125px; */
+  }
+  
+  .titles{
+    margin: 0px;
+    padding-top: 62.5px;
+    padding-left: 125px;
+  }
+  
+  #designIcon{
+    width: 150px;
+  }
+  
+  .skillsDiv{
+    display: flex;
+  }
+  
+  .skillsDiv ul{
+    flex: 1;
+    text-align: center;
+  }
+  
+  #ideiasOffMywork{
+    text-align: center;
+  }
+  
+  /* myself */
+  #myself{
+    width: 100%;
+  }
+  
+  .myself_text p{
+    text-align: justify;
+    padding-left: 125px;
+    padding-right: 125px;
+    margin: 0;
+  }
+  
+  #textDois{
+  
+  }
+  
+  .textoAbout{
+    padding-top: 25px;
+  }
+  
+  /* thoughts and opinions */
+  
+  #thoughtsandopinions{
+  
+  }
+  
+  #thoughtsandopinions ul{
+    padding: 0;
+  }
+  
+  .posts{
+    display: flex;
+    padding-left: 125px;
+    padding-right: 125px;
+  }
+  
+  .ulPostsleft p{
+    text-align: justify;
+    padding-right: 25px;
+  }
+  
+  .ulPostsright{
+    padding-left: 25px;
+    text-align: justify;
+  }
+  
+  .buttonBlog{
+    background-color: #2D5951; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+  }
+  
+  #morePostsButton{
+    display:flex;
+    justify-content:center;
+    padding-right: 125px;
+    padding-top: 25px;
+  }
+  
+  #morePostsButton button{
+    background-color: #2D5951; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+  }
+  
+  .titleDiv{
+    padding-left: 125px;
+    padding-right: 125px;
+  }
+  
+  /* form */
+  
+  #formInput{
+    padding-bottom: 50px;
+  }
+  
+  input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  #textinEmail{
+    height: 200px;
+    resize: none;
+  }
+  
+  input[type=submit] {
+    background-color: #2D5951;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  /* footer */
+  
+  #footer{
+    display: flex;
+    padding-left: 125px;
+  }
+  
+  #footer ul{
+    padding: 0;
+  }
+  
+  #footer ul li{
+    list-style: none;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+  }
+  
+  #footer ul li a{
+    text-decoration: none;
+    color: black;
+  }
