@@ -104,7 +104,6 @@ const Home = () => {
               </ul>
             </div>
             <div>
-              <Medium />
             </div>
             { /*<div className="posts">
               <ul className="ulPostsleft">
