@@ -5,21 +5,24 @@ const cors = require('cors');
 
 const port = process.env.PORT || 9000;
 
-app.enable('trust proxy')
-app.use(cors())
-app.use(express.static(path.join(__dirname, 'build')));
+// app.use(cors())
 
-app.use(function(request, response, next) {
+// app.use('/',express.static(path.join(__dirname, 'build')));
 
-  if (process.env.NODE_ENV != 'development' && !request.secure) {
-     return response.redirect("https://" + request.headers.host + request.url);
-  }
-
-  next();
-})
+app.use((req, res, next) => {
+  if (process.env.NODE_ENV === 'production') {
+      if (req.headers.host === 'diogomendes.net/')
+          return res.redirect(301, 'https://www.diogomendes.net');
+      if (req.headers['x-forwarded-proto'] !== 'https')
+          return res.redirect('https://' + req.headers.host + req.url);
+      else
+          return next();
+  } else
+      return next();
+});
 
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(__dirname + 'build/index.html');
 });
 
 
