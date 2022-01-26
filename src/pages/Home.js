@@ -120,6 +120,7 @@ const Home = () => {
             {/*<div id="morePostsButton">
               <button onClick={() => alert("hello from the other side")}>more posts</button>
             </div>*/}
+            {/*<Medium /> */}
           </div>
         </div>
         <div id="formInput">
