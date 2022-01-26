@@ -9,7 +9,7 @@ const port = process.env.PORT || 9000;
 
 app.use('/',express.static(path.join(__dirname, 'build')));
 
-app.use('/*',(req, res, next) => {
+app.use((req, res, next) => {
   if (process.env.NODE_ENV === 'production') {
       if (req.headers.host === 'diogomendes.net/')
           res.redirect(301, 'https://www.diogomendes.net');
