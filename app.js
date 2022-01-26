@@ -7,9 +7,9 @@ const port = process.env.PORT || 9000;
 
 // app.use(cors())
 
-// app.use('/',express.static(path.join(__dirname, 'build')));
+app.use('/',express.static(path.join(__dirname, 'build')));
 
-app.use((req, res, next) => {
+app.use('/*',(req, res, next) => {
   if (process.env.NODE_ENV === 'production') {
       if (req.headers.host === 'diogomendes.net/')
           return res.redirect(301, 'https://www.diogomendes.net');
@@ -18,11 +18,11 @@ app.use((req, res, next) => {
       else
           return next();
   } else
-      return next();
+    express.static(path.join(__dirname, 'build'))
 });
 
 app.get('/*', function (req, res) {
-  res.sendFile(__dirname + 'build/index.html');
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 
