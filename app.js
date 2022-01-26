@@ -7,8 +7,6 @@ const port = process.env.PORT || 9000;
 
 // app.use(cors())
 
-app.use('/',express.static(path.join(__dirname, 'build')));
-
 app.use((req, res, next) => {
   if (process.env.NODE_ENV === 'production') {
       if (req.headers.host === 'diogomendes.net/')
@@ -19,7 +17,7 @@ app.use((req, res, next) => {
       else
           return next();
   } else{
-    return next();
+    express.static(path.join(__dirname, 'build'))
   }
 });
 
