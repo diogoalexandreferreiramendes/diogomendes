@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Medium.css';
+import './MediumMobile.css';
 
 
 const Medium = () => {

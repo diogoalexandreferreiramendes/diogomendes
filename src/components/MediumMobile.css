@@ -1,0 +1,28 @@
+/* Padding - 15px */
+/* Ipad */
+@media only screen and (max-width: 1024px) {
+    body {
+      padding: 0;
+    }
+  }
+
+/* smartPhone */
+@media only screen and (max-width: 768px) {
+    .titleThoughts{
+        display: inline;
+    }
+    
+    .titleThoughts a{
+        padding-left: 15px;
+        margin: 0px;
+        text-decoration: none;
+        color: black
+    }
+  }
+
+/* smartPhone */
+@media only screen and (max-width: 450px) {
+    body {
+      padding: 0;
+    }
+  }

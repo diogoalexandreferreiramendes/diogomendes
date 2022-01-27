@@ -4,7 +4,6 @@ import justmyself from '../images/justmyself.jpg';
 import designdeinteriores from '../icons/design-de-interiores.png';
 import webprogramming from '../icons/web-programming.png';
 import { useNavigate } from "react-router-dom"
-import Contactsupport from './Contactsupport';
 import Medium from '../components/Medium';
 
 const Home = () => {
