@@ -4,10 +4,9 @@ import './MediumMobile.css';
 
 
 const Medium = () => {
-
     useEffect(() => {
       treatData()
-    },[])
+    })
 
     const link = 'https://medium.com/feed/@diogo_mendes' ;
 
