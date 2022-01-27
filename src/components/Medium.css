@@ -1,0 +1,11 @@
+.titleThoughts{
+    display: flex;
+    align-items: center;
+}
+
+.titleThoughts a{
+    margin: 0px;
+    padding-top: 78px;
+    text-decoration: none;
+    color: black
+}

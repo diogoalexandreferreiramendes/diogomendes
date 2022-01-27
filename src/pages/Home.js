@@ -85,42 +85,7 @@ const Home = () => {
             </div>
           </div>
           <div id="thoughtsandopinions">
-            <h1 className="titles">thoughts & opinions</h1>
-            <div className="posts">
-              <ul className="ulPostsleft">
-                <p><b>3 Things I wish I knew earlier in Life</b></p>
-                <p>I know that this topic is probably a little bit cliché, because everyone has an opinion, and thinks her’s is the one that is correct. I am not a romantic person, that thinks, everything is gonna be all right and everybody is gonna be successful. My philosophy is more like…</p>
-                <a href={"https://medium.com/@diogo_mendes/3-things-i-wish-i-knew-earlier-in-life-b3920478db43"}>
-                  <button className="buttonBlog">read more</button>
-                </a>  
-              </ul>
-              <ul className="ulPostsright">
-                <p><b>Bitcoin in a GenZ</b></p>
-                <p>As a GenZ I think that Bitcoin was one Tops Inventions of the 21 century, because of the freedom that gives people, literally anyone with an internet connection can buy and sell Bitcoin. You can also do transactions between two entities without the need of a third party, because of…
-                </p>
-                <a href={"https://medium.com/@diogo_mendes/bitcoin-in-a-genz-acdd83c43416?source=user_profile---------1-------------------------------"}>
-                  <button className="buttonBlog">read more</button>
-                </a>  
-              </ul>
-            </div>
-            <div>
-            </div>
-            { /*<div className="posts">
-              <ul className="ulPostsleft">
-                <p><b>#002</b></p>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                <button onClick={() => alert("episode #004")} className="buttonBlog">read more</button>
-              </ul>
-              <ul className="ulPostsright">
-                <p><b>#001</b></p>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                <button onClick={() => alert("episode #004")} className="buttonBlog">read more</button>
-              </ul>
-            </div> */}
-            {/*<div id="morePostsButton">
-              <button onClick={() => alert("hello from the other side")}>more posts</button>
-            </div>*/}
-            {/*<Medium /> */}
+            <Medium />
           </div>
         </div>
         <div id="formInput">
