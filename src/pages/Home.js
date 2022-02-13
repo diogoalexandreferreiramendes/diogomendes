@@ -4,7 +4,6 @@ import justmyself from '../images/justmyself.jpg';
 import designdeinteriores from '../icons/design-de-interiores.png';
 import webprogramming from '../icons/web-programming.png';
 import { useNavigate } from "react-router-dom"
-import Medium from '../components/Medium';
 
 const Home = () => {
 
@@ -18,7 +17,7 @@ const Home = () => {
     <div>
       <div className="navbarHome" id="navbarId">
         <ul className="ulnavbar">
-          <li id="listStyle"><a href="#thoughtsandopinions">thought&opinions</a></li>
+          <li id="listStyle"><a href="https://medium.com/@diogo_mendes">thought&opinions</a></li>
           <li><a href="#formInput" >contact</a></li>
         </ul>
       </div>
@@ -83,9 +82,6 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div id="thoughtsandopinions">
-            <Medium />
-          </div>
         </div>
         <div id="formInput">
           <h1 className="titles">contact</h1>
@@ -114,8 +110,7 @@ const Home = () => {
           <li><a href="#navbarId">intro</a></li>
           <li><a href="#skills">skills</a></li>
           <li><a href="#myself_me">about me</a></li>
-          <li><a href="#thoughtsandopinions">thought and opinions</a></li>
-          <li><a href="#formInput">contact</a></li>
+          <li><a href="https://medium.com/@diogo_mendes">thought and opinions</a></li>
         </ul>
         <ul>
           <li><a href={"https://www.linkedin.com/in/diogo-mendes-656715149/"}>linkedin</a></li>
