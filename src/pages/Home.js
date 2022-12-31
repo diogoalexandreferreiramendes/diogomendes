@@ -28,8 +28,8 @@ const Home = () => {
               <img src={justmyself} id="myself" alt="myself" />
             </div>
             <div className="introHomeText">
-              <p>Ola, sou o Diogo Mendes</p>
-              <p>Desennho e contruo websites e aplicações</p>
+              <p>Ola, sou o Diogo Mendes!</p>
+              <p>Desenho e construo websites e aplicações</p>
             </div>
           </div>
           <div className="skills" id="skills">
@@ -40,12 +40,12 @@ const Home = () => {
                 <img src={designdeinteriores} id="designIcon" alt="designIcon" />
               </ul>
               <ul>
-                <h3>Developer:</h3>
+                <h3>Programador:</h3>
                 <img src={webprogramming} id="designIcon" alt="designIcon" />
               </ul>
             </div>
-            <p id="ideiasOffMywork">Simple, Fundamental,<br/>
-            Clean and Effiecent</p>
+            <p id="ideiasOffMywork">Simples, Essencial e<br/>
+            Eficiênte</p>
             <div className="skillsDiv">
               <ul>
                 <p><b>Tipo de designs:</b></p>
@@ -64,22 +64,16 @@ const Home = () => {
             <h1 className="titles">myself</h1>
             <div className="myself_text">
               <p className="textoAbout">
-              Ola, o meu nome é Diogo Mendes, vivo numa pequeno cidade no norte de Portugal chamada Guimarães.
-              Apesar de ser uma cidade pequena é muito bonita.
-              Com 26 anos acho que já fiz varias coisas interessantes tais com: sou um faixa castanha de Jiu-Jitsu Brasileiro e por varias vezes campãeo nacional.
-              Em todos o meu percurso até agora nunca tive um trabalho qualificado, trabalhei em cafés, bares, restaurantes, bombas de gasolina, quiosque e o meu primeiro trabalho foi apanhar fruta.
-              Apesar de nunca ter tido um trabalho na area da tecnologia, sei que todos os trabalhos que tive até agora, fizeram com que eu aprendesse a lidar com pessoas.
-              Agora sei falar com qualquer pessoa.
-              Neste momento estou á procura de um emprego na area da tecnologia. Todas as habilidades, seja design ou programação. Algo que aprendi sozinho.
-              Eu sei que não tenho uma licenciatura em informatica, mas eu sei como aprender algo novo.
-              Posso não saber a resposta mas sei como descobrir a solução.
+              Olá, o meu nome é Diogo Mendes, vivo numa pequena cidade no norte de Portugal chamada Guimarães. Apesar de ser uma cidade pequena é muito bonita e cheia de história. 
 
+              Com 26 anos acho que já fiz várias coisas interessantes tais como: sou um faixa castanha de Jiu-Jitsu Brasileiro e por várias vezes campãeo nacional. Em todos o meu percurso até agora nunca tive um trabalho qualificado, trabalhei em cafés, bares, restaurantes, bombas de gasolina, quiosque e o meu primeiro trabalho foi apanhar fruta. Apesar de nunca ter tido um trabalho na área da tecnologia, sei que todos os trabalhos que tive até agora, fizeram com que eu aprendesse a lidar com pessoas. Agora sei falar com qualquer pessoa. 
+
+              Neste momento estou à procura de um emprego na área da tecnologia. Todas as habilidades, seja design ou programação. Algo que aprendi sozinho. Eu sei que não tenho uma licenciatura em informatica, mas eu sei como aprender algo novo. 
+
+              Posso não saber a resposta mas sei como descobrir a solução!
               </p>
               <p className="textoAbout">
-              Com aquilo sei de programação e design consigo fazer varias coisas.
-              Na area do design consigo, desenhar e criar projectos, tipo apps, websites, logos, capas de podcast, editar videos e fotos.
-              Normalmente uso a plataforma adobe para fazer isto, photoshop, illustrator, premiere, xd e também Figma.
-              Na programação consigo fazer frontend dos sites e aplicações. Por exemplo este site é todo feito com React. Mas para saber mais podem, ver os meus projectos.
+              Com aquilo que sei de programação e design consigo fazer várias coisas. Na área do design consigo desenhar e criar projectos, tipo apps, websites, logos, capas de podcast, editar vídeos e fotos. Normalmente, uso a plataforma adobe para fazer isto, photoshop, illustrator, premiere, xd e também Figma. Na programação consigo fazer frontend dos sites e aplicações. Por exemplo este site é todo feito com React. Mas para saber mais podem, ver os meus projectos.
               </p>
             </div>
           </div>
@@ -108,7 +102,7 @@ const Home = () => {
           <li><a href="#navbarId">intro</a></li>
           <li><a href="#skills">habilidades</a></li>
           <li><a href="#myself_me">sobre mim</a></li>
-          <li><a href="https://medium.com/@diogo_mendes">thought and opinions</a></li>
+          <li><a href="https://medium.com/@diogo_mendes">pensamentos&opiniões</a></li>
         </ul>
         <ul>
           <li><a href={"https://www.linkedin.com/in/diogo-mendes-656715149/"}>linkedin</a></li>
