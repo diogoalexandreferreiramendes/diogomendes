@@ -11,6 +11,7 @@ const NavBar = () => {
           <li id="listStyle"><Link to={'/'}>intro</Link></li>
           {/* <li id="listStyle"><Link to={'/projects'}>projects</Link></li>
           <li id="listStyle"><Link to={'/thoughts&opinions'}>thoughts&opinions</Link></li> */}
+          <li id="listStyle"><Link to={'/curriculum'}>curriculum</Link></li>
           <li>
             <li id="listStyle">
                 <a href="https://www.linkedin.com/in/diogo-mendes-656715149/" > <AiFillLinkedin size={30}/> </a>

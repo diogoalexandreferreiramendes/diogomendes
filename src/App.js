@@ -11,6 +11,7 @@ import Login from './pages/Login';
 import Addposts from './pages/add/Addposts';
 import Dashboard from './pages/dashboard/Dashboard';
 import AddTo from './pages/add/AddTo';
+import Curriculo from './pages/Curriculo';
 
 const App = () => {
   return(
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/dashboard" element={<Dashboard />}/>
           <Route path="/addposts" element={<Addposts />} />
           <Route path="/addto" element={<AddTo />} />
+          <Route path="/curriculum" element={<Curriculo />} />
         </Routes>
   )
 }

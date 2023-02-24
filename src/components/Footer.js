@@ -8,8 +8,10 @@ const Footer = () => {
         <div id="final_footer">
         <ul>
           <li><Link to={'/'}>intro</Link></li>
-          <li><Link to={'/projects'}>projects</Link></li>
-          <li><Link to={'/thoughts&opinions'}>thoughts&opinions</Link></li>
+          {/* <li><Link to={'/projects'}>projects</Link></li> */}
+          <li><a href={"https://medium.com/@diogo_mendes"}>projects</a></li>
+          {/* <li><Link to={'/thoughts&opinions'}>thoughts&opinions</Link></li> */}
+          <li><a href={"https://medium.com/@diogo_mendes"}>thoughts&opinions</a></li>
           <li><Link to={'/contactsupport'}>contacto</Link></li>
         </ul>
         </div>
