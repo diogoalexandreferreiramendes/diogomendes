@@ -1,0 +1,26 @@
+.navbarHome{
+    background-color: #fff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 200px;
+  }
+  
+  .ulnavbar{
+    display:flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #listStyle{
+    padding-right: 25px;
+  }
+  
+  .ulnavbar li{
+    list-style: none;
+  }
+  
+  .ulnavbar li a{
+    text-decoration: none;
+    color: black;
+  }

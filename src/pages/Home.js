@@ -4,8 +4,17 @@ import justmyself from '../images/justmyself.jpg';
 import designdeinteriores from '../icons/design-de-interiores.png';
 import webprogramming from '../icons/web-programming.png';
 import { useNavigate } from "react-router-dom"
+import NavBar from '../components/NavBar';
+import Projects from '../components/projects/Projects';
+import To from '../components/to/To';
+import Footer from '../components/Footer';
+import { useEffect, useState } from 'react';
+import { collection, doc, getDocs } from 'firebase/firestore';
+import { db } from '../firebase';
 
 const Home = () => {
+  const [data, setData] = useState()
+  const [datato, setDatato] = useState()
 
   let navigate = useNavigate();
 
@@ -13,14 +22,42 @@ const Home = () => {
     navigate("/contactsupport")
   }
 
+  useEffect(() => {
+    const userData = async () => {
+      const queryUser = await getDocs(collection(db, "projects"))
+
+      const projectList = queryUser.docs.map((doc) => ({ 
+          id: doc.id,
+          texto: doc.data().texto_project, 
+          title_project: doc.data().title_project, 
+          timestamp: doc.data().timestamp,
+          image_url: doc.data().image_url,
+          data_inicio: doc.data().data_inicio,
+          data_fim: doc.data().data_fim,
+          now: doc.data().now
+        })
+      )
+      setData(projectList)
+    }
+    const userTo = async () => {
+      const user_To = await getDocs(collection(db, "to"))
+
+      const to_post = user_To.docs.map((doc) => ({
+        id: doc.id,
+        texto: doc.data().texto_to,
+        title_to: doc.data().title_to,
+        image_url: doc.data().image_url,
+        timestamp: doc.data().timestamp
+      }))
+      setDatato(to_post)
+    }
+    userData()
+    userTo()
+  },[])
+
   return(
     <div>
-      <div className="navbarHome" id="navbarId">
-        <ul className="ulnavbar">
-          <li id="listStyle"><a href="https://medium.com/@diogo_mendes">pensamentos&opiniões</a></li>
-          <li><a href="#formInput" >contacto</a></li>
-        </ul>
-      </div>
+      <NavBar />
       <div className="colorBody">
         <div>
           <div className="introHome">
@@ -28,8 +65,8 @@ const Home = () => {
               <img src={justmyself} id="myself" alt="myself" />
             </div>
             <div className="introHomeText">
-              <p>Ola, sou o Diogo Mendes!</p>
-              <p>Desenho e construo websites e aplicações</p>
+              <p>Hi, i'm Diogo Mendes!</p>
+              <p> I design and build websites and apps  </p>
             </div>
           </div>
           <div className="skills" id="skills">
@@ -40,21 +77,21 @@ const Home = () => {
                 <img src={designdeinteriores} id="designIcon" alt="designIcon" />
               </ul>
               <ul>
-                <h3>Programador:</h3>
+                <h3>Programmer:</h3>
                 <img src={webprogramming} id="designIcon" alt="designIcon" />
               </ul>
             </div>
-            <p id="ideiasOffMywork">Simples, Essencial e<br/>
-            Eficiênte</p>
+            <p id="ideiasOffMywork">easy, simple and<br/>
+            painless</p>
             <div className="skillsDiv">
               <ul>
-                <p><b>Tipo de designs:</b></p>
-                <p>UI, UX, Logos, Web, Mobile, Apps</p>
+                <p><b>Designs:</b></p>
+                <p>UI, UX, Logos, Web, Apps</p>
               </ul>
               <ul>
-                <p><b>Programação</b></p>
-                <p>HTML, Css, Bootstrap,<br/> 
-                JS, React, React Native, Node,<br/></p>
+                <p><b>Coding</b></p>
+                <p>Js, React,<br/> 
+                React Native, Node,<br/></p>
               </ul>
             </div>
           </div>
@@ -64,52 +101,47 @@ const Home = () => {
             <h1 className="titles">myself</h1>
             <div className="myself_text">
               <p className="textoAbout">
-              Olá, o meu nome é Diogo Mendes, vivo numa pequena cidade no norte de Portugal chamada Guimarães. Apesar de ser uma cidade pequena é muito bonita e cheia de história. 
 
-              Com 26 anos acho que já fiz várias coisas interessantes tais como: sou um faixa castanha de Jiu-Jitsu Brasileiro e por várias vezes campãeo nacional. Em todos o meu percurso até agora nunca tive um trabalho qualificado, trabalhei em cafés, bares, restaurantes, bombas de gasolina, quiosque e o meu primeiro trabalho foi apanhar fruta. Apesar de nunca ter tido um trabalho na área da tecnologia, sei que todos os trabalhos que tive até agora, fizeram com que eu aprendesse a lidar com pessoas. Agora sei falar com qualquer pessoa. 
+              Hey, I'm Diogo! I'm a 26-year-old based in Lisbon. I'm also a self-taught designer and developer with a passion for creating beautiful and functional digital experiences. From coding to design, I've taught myself everything I know, and I take pride in my ability to learn and adapt to new challenges. When I'm not training or coding, I love exploring the city and finding new inspiration for my work. I'm excited to showcase my skills and projects on my personal website, and I hope to inspire others to follow their passions and learn new skills on their own.
 
-              Neste momento estou à procura de um emprego na área da tecnologia. Todas as habilidades, seja design ou programação. Algo que aprendi sozinho. Eu sei que não tenho uma licenciatura em informatica, mas eu sei como aprender algo novo. 
-
-              Posso não saber a resposta mas sei como descobrir a solução!
-              </p>
-              <p className="textoAbout">
-              Com aquilo que sei de programação e design consigo fazer várias coisas. Na área do design consigo desenhar e criar projectos, tipo apps, websites, logos, capas de podcast, editar vídeos e fotos. Normalmente, uso a plataforma adobe para fazer isto, photoshop, illustrator, premiere, xd e também Figma. Na programação consigo fazer frontend dos sites e aplicações. Por exemplo este site é todo feito com React. Mas para saber mais podem, ver os meus projectos.
               </p>
             </div>
           </div>
         </div>
         <div id="formInput">
-          <h1 className="titles">contacto</h1>
-          <div className="titleDiv">
-            <form onClick={() => changeToContact()} action="action_page.php">
-              <label htmlFor="fname">Nome:</label>
-              <input type="text" id="fname" name="firstname" placeholder="primeiro nome"/>
-
-              <label htmlFor="email">Email:</label>
-              <input type="text" id="emailInput" name="emailInput" placeholder="email"/>
-
-              <label htmlFor="emailText">Text:</label>
-              <textarea type="text" id="textinEmail" name="emailInput" placeholder=""/>
-
-              
-             <input type="submit" value="Submit"></input>
-            </form>
+          <h1 className="titles">projects</h1>
+            {data?.sort((a,b) => a.timestamp < b.timestamp ? 1: -1)
+                  .map((projects) => (
+                <Projects 
+                  id={projects.id}
+                  title={projects.title_project} 
+                  texto={projects.texto}
+                  timestamp={projects.timestamp}
+                  image_url={projects.image_url}
+                  data_inicio={projects.data_inicio}
+                  data_fim={projects.data_fim}
+                  now={projects.now}
+                />
+              ))}
+        </div>
+        <div id="formInput">
+          <h1 className="titles">thoughts/opinions</h1>
+            <div className='div_to'>
+          {datato?.sort((a,b) => a.timestamp < b.timestamp ? 1: -1)
+                  .slice(0,4)
+                  .map((projects) => (
+                    <To 
+                      id={projects.id}
+                      title_project={projects.title_to} 
+                      texto_to={projects.texto}
+                      timestamp={projects.timestamp}
+                      image_url={projects.image_url}
+                    />
+                ))}
           </div>
         </div>
       </div>
-      <div id="footer">
-        <ul>
-          <li><a href="#navbarId">intro</a></li>
-          <li><a href="#skills">habilidades</a></li>
-          <li><a href="#myself_me">sobre mim</a></li>
-          <li><a href="https://medium.com/@diogo_mendes">pensamentos&opiniões</a></li>
-        </ul>
-        <ul>
-          <li><a href={"https://www.linkedin.com/in/diogo-mendes-656715149/"}>linkedin</a></li>
-          <li><a href={"https://medium.com/@diogo_mendes"}>medium</a></li>
-          <li><a href={"https://github.com/diogoalexandreferreiramendes"}>github</a></li>
-        </ul>
-      </div>  
+      <Footer/> 
     </div>
   )
 }
